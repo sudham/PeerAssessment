@@ -1,11 +1,10 @@
-#README
-========================================================
+
+
 This is the README file for the script run_analysis.R created for the "Getting and Cleaning Data" Peer Assignment 2.
 
+##Input Data set
 
-#Input Data set
-
-##Download the data set and extract into a UCI HAR Dataset folder to obtain the following : 
+Download the data set and extract into a UCI HAR Dataset folder to obtain the following : 
 1.	README.txt
 2.	features_info.txt: Shows information about the variables used on the feature vector.
 3.	features.txt: List of all features
@@ -19,18 +18,18 @@ This is the README file for the script run_analysis.R created for the "Getting a
 11.	Files under test/Inertial Signals and train/Inertial Signals (these are not used for the analysis)
 
 
-#Output Data set
+##Output Data set
 The script creates a directory results under UCI HAR Dataset to store following files :
 1.	TidyMergedData.csv -  tidy data
 2.	DatasetwithMeans.csv - data with average of the feature measurements
 
 
-#Running the Script
+##Running the Script
 1.	Change current directory to the UCI HAR Dataset  folder.
 2.	Run {Rscript <path to>/run_analysis.R}
 
 
-#Data Preparation 
+##Data Preparation 
 1.	Check if required package reshape2 is installed and loaded
 2.	Create results folder to save resulting data sets as .csv files 
 3.	Read the test and training data - X_train X_test, Y_train and Y_test, Subjects_train, Subjects_test from respective directories and merge to get XData, YData and Subjects
