@@ -1,6 +1,6 @@
 
 
-This is the README file for the script run_analysis.R created for the "Getting and Cleaning Data" Peer Assignment 2.
+This is the README file for the script run_analysis.R created for the "Getting and Cleaning Data" Peer Assessment.
 
 ##Input Data set
 
