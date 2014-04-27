@@ -5,16 +5,16 @@
 ## 1. Data downloaded and extracted under current working directory "UCI HAR Dataset"
 #####################################################################################################
 # 1. Check if required package reshape2 is installed and loaded
-# 2. Create results folder to save resulting data sets as .csv files 
+# 2. Create results folder to save resulting data sets as .txt files 
 # 3. Read the test and training data - X_train and X_test, Y_train and Y_test, Subjects_train,
 #    Subjects_test from respective directories and merge to get XData, YData and Subjects
 # 4. Read the features and activities data
 # 5. Create filter for extracting std and mean values from XData and
 #    name cols accordingly. Replace activity index with activity in YData
 #    Add descriptive colnames for combined YData as Activity and subjects as Subjects
-# 8. Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.csv
+# 8. Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.txt
 # 9. Create a second, independent tidy data set 
-#    with the mean of each variable for each activity and each subject and save as DatasetwithMeans.csv
+#    with the mean of each variable for each activity and each subject and save as DatasetwithMeans.txt
 #####################################################################################################
 
 #  Check if required package reshape2 is installed and loaded
@@ -27,7 +27,7 @@
         }
         library(reshape2)
 
-# Create results folder to save resulting data sets as .csv files 
+# Create results folder to save resulting data sets as .txt files 
 
         result_folder <- "results"
         if(!file.exists(result_folder)){
@@ -70,13 +70,13 @@
         names(YData) <- "activity"    
         names(Subjects) <- "subject"
 
-# Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.csv   \
+# Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.txt   
 
         tidyMergedData <- cbind(Subjects, YData, XData)
-        write.table(tidyMergedData, paste0( result_folder, "/", "TidyMergedData.csv" ), sep = ",", row.names = FALSE)
+        write.table(tidyMergedData, paste0( result_folder, "/", "TidyMergedData.txt" ), sep = ",", row.names = FALSE)
         
 # Create a second, independent tidy data set 
-# with the mean of each variable for each activity and each subject and save as DatasetwithMeans.csv
+# with the mean of each variable for each activity and each subject and save as DatasetwithMeans.txt
 
         id_vars = c( "activity", "subject")
         measure_vars = setdiff(colnames(tidyMergedData), id_vars)
@@ -84,6 +84,6 @@
         
         result <- dcast(melted_data, subject + activity ~ variable, mean)    
         
-        write.table(result, paste0( result_folder, "/", "DatasetwithMeans.csv"), sep = ",", row.names = FALSE)
+        write.table(result, paste0( result_folder, "/", "DatasetwithMeans.txt"), sep = ",", row.names = FALSE)
         
         print("Done")

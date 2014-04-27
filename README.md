@@ -20,8 +20,10 @@ Download the data set and extract into a UCI HAR Dataset folder to obtain the fo
 
 ##Output Data set
 The script creates a directory results under UCI HAR Dataset to store following files :
-1.	TidyMergedData.csv -  tidy data
-2.	DatasetwithMeans.csv - data with average of the feature measurements
+1.	TidyMergedData.txt -  tidy data
+2.	DatasetwithMeans.txt - data with average of the feature measurements
+
+These files can be read using Excel as they are comma separated
 
 
 ##Running the Script
@@ -31,10 +33,10 @@ The script creates a directory results under UCI HAR Dataset to store following 
 
 ##Data Preparation 
 1.	Check if required package reshape2 is installed and loaded
-2.	Create results folder to save resulting data sets as .csv files 
+2.	Create results folder to save resulting data sets as .txt files 
 3.	Read the test and training data - X_train X_test, Y_train and Y_test, Subjects_train, Subjects_test from respective directories and merge to get XData, YData and Subjects
 4.	Read the features and activities data
 5.	Create filter for extracting std and mean values from XData and name the columns accordingly.
 6.	Replace activity index with activity in YData. Add descriptive colnames for combined YData as Activity and subjects as Subjects
-7.	Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.csv
-8.	Create a second, independent tidy data set with the mean of each variable for each activity and each subject and save as DatasetwithMeans.csv
+7.	Create tidy data set by cbind Subjects, YData and XData and save as TidyMergedData.txt
+8.	Create a second, independent tidy data set with the mean of each variable for each activity and each subject and save as DatasetwithMeans.txt

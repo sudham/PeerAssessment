@@ -114,8 +114,8 @@ The following files are available for the train and test data. Their description
 
 ###Result Data Set
 
-The script creates a directory results under UCI HAR Dataset to store following files :
-1.TidyMergedData.csv -  tidy data
+The script creates a directory results under UCI HAR Dataset to store following comma separated text files :
+1.TidyMergedData.txt -  tidy data
 
 Contains the following 
 * activity
@@ -143,7 +143,7 @@ The extracted measurements for mean and standard deviation
 * mean(): Mean value
 * std(): Standard deviation
 
-2.DatasetwithMeans.csv - data with average of the feature measurements
+2.DatasetwithMeans.txt - data with average of the feature measurements
 
 The above data with average of each variable for each activity and each subject.
 
