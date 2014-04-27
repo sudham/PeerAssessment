@@ -17,12 +17,12 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ###Activities
 
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
+1. WALKING
+2. WALKING_UPSTAIRS
+3. WALKING_DOWNSTAIRS
+4. SITTING
+5. STANDING
+6. LAYING
 
 The file 'activity_labels.txt': Links the class labels with their activity name.
 
